@@ -1,7 +1,8 @@
 /*eslint-disable no-unused-vars */
 import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
 
-const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync }) =>
+const Counter = ({ value, onIncrementAsync }) =>
     <div>
         {' '}
         <button onClick={onIncrementAsync}>Increment after 1 second</button>
@@ -15,4 +16,22 @@ Counter.propTypes = {
   onIncrementAsync: PropTypes.func.isRequired
 }
 
-export default Counter
+const mapStateToProps = (state) => {
+    return {
+        value: state.counter
+    }
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+    const action = type => dispatch({type})
+    return {
+        onIncrementAsync: ()=> action('INCREMENT_ASYNC')
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Counter)
+
