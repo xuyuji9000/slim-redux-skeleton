@@ -1,5 +1,5 @@
-# slim react skeleton
-This is slim react skeleton.
+# slim redux skeleton
+This is slim redux skeleton.
 
 ## directories
 
