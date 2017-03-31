@@ -1,16 +1,24 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import ImageUpload from './components/ImageUpload'; 
+import 'babel-polyfill'
+import React, { Component } from 'react'
+import ReactDOM, { render } from 'react-dom'
 
-const App = (
-    <div>
-        <div>Hello World</div>
-        <ImageUpload></ImageUpload>
-    </div>
-);
+import Counter from './components/Counter'
+import { store } from './conf'
 
+const action = type => store.dispatch({type})
 
-render(
-    App,
-    document.getElementById('root')
-);
+function localRender()
+{
+    ReactDOM.render(
+        <Counter 
+            value={store.getState().counter}
+            onIncrementAsync={() => action('INCREMENT_ASYNC')}
+        >
+        </Counter>,
+        document.getElementById('root')
+
+    )
+}
+
+localRender()
+store.subscribe(localRender)
