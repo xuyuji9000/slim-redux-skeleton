@@ -1,7 +1,8 @@
 import reducers from './reducers'
+import * as sagas from './sagas'
 
 
-export { reducers }
+export { reducers, sagas }
 
 
 export default from './Counter'
