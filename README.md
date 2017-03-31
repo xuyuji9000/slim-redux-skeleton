@@ -28,15 +28,21 @@ This is slim redux skeleton.
 4. webpack.config.js
 
 
-## command
+## instructions 
 
-### setup
+test
+
+```bash
+npm test
+```
+
+setup
 
 ```bash
 npm run setup
 ```
 
-### dev
+dev
 
 run dev environment
 ```bash
@@ -53,7 +59,7 @@ run backend api
 php -S localhsot:3001
 ```
 
-### upload
+upload
 
 upload picture page
 ```bash
