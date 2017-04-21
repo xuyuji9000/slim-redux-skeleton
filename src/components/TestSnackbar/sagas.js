@@ -1,8 +1,13 @@
 import { delay } from 'redux-saga'
 import { put, takeEvery, call  } from 'redux-saga/effects'
-import * as consts from './consts'
+import * as actionTypes from './actionTypes'
 
-export function* helloSnackbar()
+function* helloSnackbar()
 {
-    console.log('Hello Snackbar')
+    yield call(console.log,'Hello Snackbar')
+}
+
+export function* watchHelloSnackbar() 
+{
+    yield takeEvery(actionTypes.HELLO_SNACKBAR, helloSnackbar)
 }

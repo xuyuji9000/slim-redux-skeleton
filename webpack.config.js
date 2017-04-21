@@ -3,6 +3,7 @@ var webpack = require("webpack");
 
 module.exports = {
     entry: [
+        'babel-polyfill',
         './src/app.js',
     ],
     devtool: 'source-map',

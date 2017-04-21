@@ -1,6 +1,6 @@
 import { delay } from 'redux-saga'
 import { put, takeEvery, call } from 'redux-saga/effects'
-import * as consts from './consts'
+import * as constants from './consts'
 
 function* helloSaga()
 {
@@ -10,11 +10,11 @@ function* helloSaga()
 function* incrementAsync()
 {
     yield call(delay, 1000)
-    yield put({type: consts.INCREMENT})
+    yield put({type: constants.INCREMENT})
 }
 
 export function* watchIncrementAsync()
 {
-    yield takeEvery(consts.INCREMENT_ASYNC, incrementAsync)
+    yield takeEvery(constants.INCREMENT_ASYNC, incrementAsync)
 }
 
