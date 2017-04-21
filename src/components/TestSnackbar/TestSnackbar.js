@@ -16,17 +16,28 @@ let TestSnackbar = createReactClass({
     componentWillMount() {
         this.props.actions.helloSnackbar()
     },
+    componentWillReceiveProps:nextProps =>
+    {
+        console.log(nextProps)
+        // if(this.props.open != nextProps.open)
+        // {
+        //     this.setState({open: nextProps.open})
+        // }
+    },
     handleOpen: function() {
         this.setState({
             open: true
         })
+        this.props.actions.openSnackbar()
     },
     handleClose: function() {
         this.setState({
             open: false
         })
+        this.props.actions.closeSnackbar()
     },
     render: function() {
+        console.log(this.props)
         return (
             <div>
                 <RaisedButton
@@ -48,12 +59,16 @@ let TestSnackbar = createReactClass({
 })
 
 TestSnackbar.propTypes = {
+    open: PropTypes.bool.isRequired,
     acitons: PropTypes.shape({
-        helloSnackbar: PropTypes.func.isRequired
+        helloSnackbar: PropTypes.func.isRequired,
+        closeSnackbar: PropTypes.func.isRequired,
+        openSnackbar: PropTypes.func.isRequired
     })
 }
 
 const mapStateToProps = state => ({
+    open: state.testsnackbar.open
 })
 
 const mapDispatchToProps = dispatch => ({

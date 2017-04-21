@@ -9,7 +9,5 @@ export default function* rootSaga()
     sagas = sagas.concat(Object.values(counter.sagas))
     sagas = sagas.concat(Object.values(testsnackbar.sagas))
 
-    sagas = sagas.map(saga => fork(saga))
-
     yield sagas
 }
