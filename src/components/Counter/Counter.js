@@ -1,6 +1,8 @@
 /*eslint-disable no-unused-vars */
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import * as consts from './consts'
 
 const Counter = ({ value, onIncrementAsync }) =>
     <div>
@@ -26,7 +28,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     const action = type => dispatch({type})
     return {
-        onIncrementAsync: ()=> action('INCREMENT_ASYNC')
+        onIncrementAsync: ()=> action(consts.INCREMENT_ASYNC)
     }
 }
 
