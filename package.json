@@ -8,9 +8,10 @@
   },
   "scripts": {
     "test": "jest --watch",
-    "build:dev": "webpack-dev-server --inline --hot --devtool source-map",
-    "build:prod": "webpack",
-    "setup": "npm i && composer install"
+    "frontend:dev": "webpack-dev-server --inline --hot --devtool source-map",
+    "frontend:prod": "webpack",
+    "setup": "npm i && composer install",
+    "backend": "php -S localhost:3001 -t ./public ./public/index.php"
   },
   "repository": {
     "type": "git",
