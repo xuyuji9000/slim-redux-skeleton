@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/xuyuji9000/slim-redux-skeleton.svg?branch=master)](https://travis-ci.org/xuyuji9000/slim-redux-skeleton)
 # slim redux skeleton
 This is slim redux skeleton.
 
