@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import * as consts from './consts'
+import * as constants from './constants'
 
 const Counter = ({ value, onIncrementAsync }) =>
     <div>
@@ -28,7 +28,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     const action = type => dispatch({type})
     return {
-        onIncrementAsync: ()=> action(consts.INCREMENT_ASYNC)
+        onIncrementAsync: ()=> action(constants.INCREMENT_ASYNC)
     }
 }
 
