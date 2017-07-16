@@ -1,4 +1,4 @@
-import { combineReducers } from "redux"
+import { combineReducers } from 'redux'
 
 import * as counter from '../components/Counter'
 import * as testsnackbar from '../components/TestSnackbar'

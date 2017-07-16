@@ -1,15 +1,13 @@
 import React from 'react'
-import ReactDOM, { render } from 'react-dom'
+import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 
 import { store } from './conf'
-import Counter from './components/Counter'
-import TestSnackbar from './components/TestSnackbar'
 import Button from './components/Button'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
+import injectTapEventPlugin from 'react-tap-event-plugin'
+injectTapEventPlugin()
 
 
 const App = function()

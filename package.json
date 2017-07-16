@@ -8,9 +8,11 @@
   },
   "scripts": {
     "test": "jest --watch",
+    "lint": "eslint ./src/**/*.js",
+    "watch:lint": "onchange './src/**/*.js' -- yarn run lint",
     "frontend:dev": "webpack-dev-server --inline --hot --devtool source-map",
     "frontend:prod": "webpack",
-    "setup": "npm i && composer install",
+    "setup": "yarn install && composer install",
     "backend": "php -S localhost:3001 -t ./public ./public/index.php"
   },
   "repository": {
@@ -48,7 +50,10 @@
     "babel-preset-stage-1": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
     "css-loader": "^0.28.1",
+    "eslint": "^4.2.0",
+    "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.0",
+    "onchange": "^3.2.1",
     "redux-devtools": "^3.3.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.2.0",

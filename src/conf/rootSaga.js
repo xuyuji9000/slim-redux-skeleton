@@ -1,4 +1,3 @@
-import { fork } from 'redux-saga/effects'
 import * as counter from  '../components/Counter'
 import * as testsnackbar from '../components/TestSnackbar'
 
