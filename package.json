@@ -9,10 +9,10 @@
   "scripts": {
     "test": "jest --watch",
     "lint": "eslint ./src/**/*.js",
-    "watch:lint": "onchange './src/**/*.js' -- yarn run lint",
+    "watch:lint": "onchange './src/**/*.js' -- npm run lint",
     "frontend:dev": "webpack-dev-server --inline --hot --devtool source-map",
     "frontend:prod": "webpack",
-    "setup": "yarn install && composer install",
+    "setup": "npm install && composer install",
     "backend": "php -S localhost:3001 -t ./public ./public/index.php"
   },
   "repository": {
