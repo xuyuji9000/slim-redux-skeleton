@@ -27,19 +27,19 @@
   "homepage": "https://github.com/xuyuji9000/php-image-server#readme",
   "dependencies": {
     "ajv": "^5.2.2",
-    "axios": "^0.16.0",
+    "axios": "^0.16.2",
     "babel-polyfill": "^6.23.0",
     "caniuse-api": "^2.0.0",
-    "create-react-class": "^15.5.2",
-    "material-ui": "^0.18.0",
-    "prop-types": "^15.5.8",
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0",
-    "react-dropzone": "^3.12.2",
-    "react-redux": "^5.0.3",
+    "create-react-class": "^15.6.0",
+    "material-ui": "^0.18.7",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-dropzone": "^3.13.4",
+    "react-redux": "^5.0.5",
     "react-tap-event-plugin": "^2.0.1",
-    "redux": "^3.6.0",
-    "redux-saga": "^0.15.4",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6",
     "styled-components": "^2.1.1"
   },
   "devDependencies": {
@@ -57,7 +57,7 @@
     "onchange": "^3.2.1",
     "redux-devtools": "^3.3.2",
     "style-loader": "^0.18.2",
-    "webpack": "^3.2.0",
+    "webpack": "^3.4.1",
     "webpack-dev-server": "^2.4.2"
   }
 }
