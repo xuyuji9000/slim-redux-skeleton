@@ -12,7 +12,6 @@ pipeline {
     stage('Test') {
       steps {
         sh 'ls -lat'
-        sh 'mkdir files'
         sh 'ls -lat'
         sh 'pwd'
       }
