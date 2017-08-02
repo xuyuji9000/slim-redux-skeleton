@@ -6,7 +6,8 @@ pipeline {
     stage('Test') {
       steps {
         sh 'node --version'
-        sh 'npm run install'
+        sh 'pwd'
+        sh 'npm install'
       }
     }
   }
