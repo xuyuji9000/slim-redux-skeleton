@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'pushd ../ && ls -lat && popd'
+        sh 'cd ../ && ls -lat '
         //sh 'npm install'
       }
     }
