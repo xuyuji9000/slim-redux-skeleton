@@ -5,9 +5,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'pwd'
-        sh 'echo $USER'
-        sh 'npm install'
+        sh 'sudo npm install'
       }
     }
     stage('Test') {
