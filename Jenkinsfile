@@ -5,14 +5,11 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'ls -lat'
-        //sh 'npm install'
+        sh 'npm install'
       }
     }
     stage('Test') {
       steps {
-        sh 'ls -lat'
-        sh 'ls -lat'
         sh 'pwd'
       }
     }
