@@ -1,0 +1,7 @@
+FROM mhart/alpine-node:8.2.1
+
+WORKDIR /src
+ADD . .
+
+CMD npm install
+CMD npm run test
