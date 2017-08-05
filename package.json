@@ -8,6 +8,8 @@
   },
   "scripts": {
     "test": "jest",
+    "docker:test": "docker build -t yogiman/slim-redux-skeleton-test -f Dockerfile.test .",
+    "remove-containers": "docker rm $(docker ps -a -q)",
     "lint": "eslint ./src/**/*.js",
     "watch:lint": "onchange './src/**/*.js' -- npm run lint",
     "frontend:dev": "webpack-dev-server --inline --hot --devtool source-map",
